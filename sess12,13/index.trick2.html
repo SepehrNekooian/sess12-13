@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgba(0, 0, 0, 0.452);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 900px;
+            height: 400px;
+            margin: 100px auto;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            transform-style: preserve-3d;
+            &:hover{
+                gap: 30px;
+                >div{
+                    &:nth-of-type(1), &:nth-of-type(3){
+                        transform:perspective(700px) rotateY(0deg) rotateX(0deg) 
+                        translate3d(0px, 0px, 0px)scale(1);
+                    }
+                    &:nth-of-type(2){
+                        transform:perspective(700px) rotateX(0deg);
+                    }
+                }
+            }
+            >div{
+                width: 200px;
+                height: 200px;
+                transition: all 1.5s ease-out;
+                border-radius: 20px;
+                background-color: blue;
+                &:nth-of-type(1){
+                    background-color: rgb(145, 5, 5);
+                    transform-origin:100% 100%;
+                    transform:perspective(700px) rotateY(-35deg) rotateX(35deg) 
+                    translate3d(132px, -81px, -101px)scale(.6);
+                }
+                &:nth-of-type(2){
+                    transform-origin: bottom;
+                    transform:perspective(700px) rotateX(35deg);
+                }
+                &:nth-of-type(3){
+                    background-color: brown;
+                    transform-origin:0 100%;
+                    transform:perspective(700px) rotateY(35deg) rotateX(35deg) 
+                    translate3d(-132px, -81px, -101px)scale(.6);
+                    
+                }
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+</body>
+</html>

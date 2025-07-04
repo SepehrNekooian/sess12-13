@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgba(0, 0, 0, 0.452);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 50px;
+            height: 50px;
+            margin: 20px auto;
+            background-color: blue;
+            border-radius: 5px;
+            transition: 2s;
+            &:nth-of-type(1){
+                &:hover{
+                    transform: rotate(50deg);
+                }
+            }
+            &:nth-of-type(2){
+                &:hover{
+                    transform: rotateX(360deg);
+                }
+            }
+            &:nth-of-type(3){
+                &:hover{
+                    transform:perspective(7000px) rotateX(130deg);
+                }
+            }
+            &:nth-of-type(4){
+                &:hover{
+                    transform:perspective(1000px) rotateY(140deg);
+                }
+            }
+            &:nth-of-type(5){
+                &:hover{
+                    transform: rotate3d(1,1,1,360deg);
+                }
+            }
+            &:nth-of-type(6){
+                &:hover{
+                    transform: rotate(-50deg);
+                }
+            }
+            &:nth-of-type(7){
+                width: 200px;
+                height: 200px;
+                background-color: rgb(145, 5, 5);
+                transform-origin:0 50%;
+                &:hover{
+                    transform:perspective(800px) rotateY(120deg);
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    
+</body>
+</html>
